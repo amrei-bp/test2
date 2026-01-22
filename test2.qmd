@@ -2,6 +2,7 @@
 title: "ggplot2 demo"
 author: "Amrei"
 date: "1/22/2026"
+theme: "solar"
 format: 
   html:
     fig-width: 8
