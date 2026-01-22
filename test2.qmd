@@ -12,7 +12,7 @@ format:
 
 ## Air Quality
 
-@fig-airquality further explores the impact of temperature on ozone level.
+@fig-airquality further explores the impact of temperature on ozone level. We can see that ozone levels rise with increasing temperatures. 
 
 ```{r}
 #| label: fig-airquality
