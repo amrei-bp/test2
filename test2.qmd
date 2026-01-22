@@ -10,17 +10,27 @@ format:
     code-fold: true
 ---
 
+```{r}
+#| label: setup
+#| include: false
+
+library(ggplot2)
+```
+
 ## Air Quality
 
-@fig-airquality further explores the impact of temperature on ozone level. We can see that ozone levels rise with increasing temperatures. 
+Figure @fig-airquality shows the relationship between daily maximum temperature and ozone concentration in New York City (May–September 1973). Higher temperatures are associated with higher ozone values, though there is considerable variability across days. A LOESS curve is used to summarize the overall pattern. LOESS fits many local regressions to show a smooth trend without assuming the relationship is linear.
 
 ```{r}
 #| label: fig-airquality
 #| fig-cap: "Temperature and ozone level."
 #| warning: false
 
-library(ggplot2)
 ggplot(airquality, aes(Temp, Ozone)) + 
   geom_point() + 
-  geom_smooth(method = "loess")
+  geom_smooth(method = "loess") + 
+    labs(
+    x = "Temperature (°F)",
+    y = "Ozone (ppb)"
+  ) 
 ```
