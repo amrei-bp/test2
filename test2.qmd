@@ -26,9 +26,10 @@ Figure @fig-airquality shows the relationship between daily maximum temperature 
 #| fig-cap: "Temperature and ozone level."
 #| warning: false
 
-ggplot(airquality, aes(Temp, Ozone)) + 
-  geom_point() + 
-  geom_smooth(method = "loess") + 
+ggplot(airquality, aes(x = Temp, y = Ozone, color = Temp)) + 
+  geom_point(alpha = 0.8) +
+  scale_color_viridis_c(name = "Temperature (°F)") +
+  geom_smooth(method = "loess", se = TRUE, color = "black") +
     labs(
     x = "Temperature (°F)",
     y = "Ozone (ppb)"
