@@ -1,0 +1,52 @@
+---
+title: "Tagging"
+---
+
+In Git one can tag specific points in a repository’s history with an extra label, besides the commit message. This can be used to mark releases for software (`version1.0, version2.0`). 
+
+For us it can be useful when submitting code to journals. With a tag we can freeze the code in time, so to speak, and make sure we can always find the correct version - and share it with others. 
+
+## Lightweight versus Annotated tags
+
+Git supports two types of tags: lightweight and annotated. 
+
+A `lightweight tag` is pretty much just a pointer to a specific commit.
+
+`Annotated tags` are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG).
+
+::: {.callout-note}
+On GitHub, tags created via the web interface are always annotated tags, because they are tied to releases.
+:::
+
+# Creating a tag
+
+We will create a tag via a GitHub release.
+
+Alternatively, you could also create them on the command line in the terminal. 
+
+In your repository, in the `Code` tab, click on `tags` (looks like a travel bag tag). 
+
+![](tag_location.png){fig-align="center" height="250"}
+
+There are no releases, so we need to create one in the `Releases` tab. Fill in the necessary detail and click `Publish release`. 
+
+This will create a zipped archive of your repository at the time of the tagging. 
+
+# View tags
+
+You can access the tag via the same tag button as above, and then download the tagged version of your repository. 
+
+In RStudio, you can fetch the tag to your local repository and you will see it in the history. 
+
+# Create a DOI for your repository
+
+Zenodo creates a DOI for a specific GitHub release, which is why tagging your repository before submitting is important.
+
+You can [issue a persistent identifier for your repository with Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content). 
+
+
+# Further reading
+
+[Tagging in git](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+
+
